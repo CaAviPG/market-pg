@@ -1,0 +1,51 @@
+  <div class="container">
+    <div class="p-0 my-5 d-flex justify-content-between bg-white row product-size" >
+      <div class="container p-0 col-md-8">
+        <%= image_tag @product.imagen, alt: "", class: "card-img-top product-show" %>
+      </div>
+
+      <div class="container p-5 col-md-4">
+        <div>
+
+          <h3> <strong> <%= @product.name %> </strong> </h3>
+          <p class="text-secondary"><%= @product.description %></p>
+
+
+        </div>
+        <h2 class="card-trip-pricing py-4 m-0"> <strong> S/. <%= @product.price %> </strong></h2>
+        <div>
+        <% if user_signed_in? %>
+                                   <%= form_for :cart, url: cart_path, method: :put do |f| %>
+                                          <%= f.hidden_field :product_id, value: @product.id %>
+                                          <%= f.hidden_field :quantity, value: 1 %>
+                                          <%= f.submit "Añadir al carrito", class: "buttoncart inline btn btn-success" %>
+                                   <%end%>
+
+        <% else %>
+                                   <p class="buttoncart">Si deseas comprar primero debes loguearte</p>
+                            <%end%>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <h3>Comments</h3>
+    <% if @product.comments.present? %>
+      <% x = 1 %>
+      <% @product.comments.each do |comment| %>
+          <div class="bg-white p-4 border">
+            <h6> <strong> Usuario <%= x %> </strong> </h6>
+            <div class="card-title m-0"> <em>"<%= comment.text %>"</em> </div>
+
+          </div>
+          <% x += 1 %>
+      <% end %>
+    <% else %>
+      <p>No hay reviews disponibles</p>
+    <% end %>
+  </div>
