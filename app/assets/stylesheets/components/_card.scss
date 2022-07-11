@@ -19,6 +19,13 @@ body {
   font-weight: 400;
   letter-spacing: 0;
   padding: 1rem;
+  // font-family: 'Muli', sans-serif;
+  //   margin: 0;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   min-height: 100vh;
+  //   overflow: hidden;
 }
 
 .main {
@@ -38,23 +45,23 @@ img {
   vertical-align: middle;
 }
 
-.btn {
-  color: #ffffff;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
-}
+// .btn-card {
+//   color: #ffffff;
+//   padding: 0.8rem;
+//   font-size: 14px;
+//   text-transform: uppercase;
+//   border-radius: 4px;
+//   font-weight: 400;
+//   display: block;
+//   width: 100%;
+//   cursor: pointer;
+//   border: 1px solid rgba(255, 255, 255, 0.2);
+//   background: transparent;
+// }
 
-.btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-}
+// .btn-card:hover {
+//   background-color: rgba(255, 255, 255, 0.12);
+// }
 
 .cards {
   display: flex;
@@ -110,4 +117,21 @@ img {
   line-height: 1.5;
   margin-bottom: 1.25rem;
   font-weight: 400;
+}
+.presentacion{
+  background-color: rgb(236, 231, 225);
+  margin: 30px auto;
+  padding: 30px;
+}
+.info-pre{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+
+}
+.productos{
+  margin:40px auto;
+  background-color: #ffffff;
+  padding: 20px 0px;
 }
